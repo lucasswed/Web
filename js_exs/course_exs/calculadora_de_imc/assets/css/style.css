@@ -1,0 +1,137 @@
+:root {
+  --primary-color: rgb(52, 52, 166);
+  --bg-color: rgb(68, 94, 173);
+  --sec-bg-color: rgb(86, 237, 237);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(61, 200, 213);
+}
+
+#main {
+  color: white;
+  padding: 40px;
+  background-color: var(--primary-color);
+  height: 80vh;
+  border-radius: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 50px 0.6fr 1fr;
+  grid-template-areas: 
+    'header header'
+    'bmi result'
+    'form form';
+  gap: 40px;
+}
+
+header {
+  font-size: 2.5em;
+  grid-area: header;
+  align-self: center;
+  text-align: center;
+}
+
+#values {
+  grid-area: bmi;
+  margin-left: 10px;
+}
+
+#values ul {
+  margin-left: 10px;
+  list-style: none;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+}
+
+#values h3 {
+  font-weight: bold;
+  font-size: 2em;
+}
+
+#description {
+  grid-area: result;
+}
+
+#description ul {
+  list-style: none;
+  margin-left: 10px;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+#description h3 {
+  font-weight: bold;
+  font-size: 2em;
+}
+
+#form {
+  grid-area: form;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#form form {
+  display: flex;
+  flex-flow: column;
+  gap: 20px;
+}
+
+#form h2 {
+  font-weight: bold;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+#form label {
+  font-size: 25px;
+}
+
+#form #weight {
+  height: 30px;
+  background-color: var(--bg-color);
+  border: 0;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 20px;
+  border-radius: 10px;
+  outline: 5px double rgb(86, 237, 237);
+}
+
+#form #height {
+  height: 30px;
+  background-color: var(--bg-color);
+  border: 0;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 20px;
+  border-radius: 10px;
+  outline: 3px double var(--sec-bg-color);
+}
+
+#form button {
+  height: 40px;
+  color: white;
+  font-size: 20px;
+  background-color: var(--bg-color);
+  outline: 3px double var(--sec-bg-color);
+  border: 0;
+  border-radius: 10px;
+  margin-top: 15px;
+}
